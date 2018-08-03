@@ -1,6 +1,6 @@
 <template>
-  <section class="icon">
-    <swiper :options="swiperOption" name="swiper2">
+  <article class="icon">
+    <swiper :options="swiperOption">
       <swiper-slide v-for="(icons,index) in pages" :key="index">
         <article class="icon-item" v-for="icon in icons" :key='icon.id'>
           <div class="icon-img"><img :src="icon.img" alt="" class="img-content">
@@ -10,17 +10,13 @@
       </swiper-slide>
     </swiper>
 
-  </section>
+  </article>
 </template>
 <script>
 export default {
   data() {
     return {
-      swiperOption: {
-        pagination: {
-          el: ".swiper-pagination"
-        }
-      },
+      swiperOption: {},
       list: [
         {
           id: "0001",
@@ -104,6 +100,10 @@ export default {
 .icon >>> .swiper-wrapper {
   height: 0;
   padding-bottom: 50%;
+}
+
+.icon {
+  margin-top: 0.1rem;
 }
 
 .icon-item {

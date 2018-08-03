@@ -1,19 +1,22 @@
 <template>
-  <div>
+  <section>
     <homeheader></homeheader>
     <homeSwiper></homeSwiper>
     <homeIcon></homeIcon>
-  </div>
+    <homeRecommend></homeRecommend>
+  </section>
 </template>
 <script>
 import homeheader from "../components/homeheader";
 import homeSwiper from "../components/homeSwiper";
 import homeIcon from "../components/homeIcon";
+import homeRecommend from "../components/homeRecommend";
 export default {
   components: {
     homeheader,
     homeSwiper,
-    homeIcon
+    homeIcon,
+    homeRecommend
   },
   data() {
     return {};

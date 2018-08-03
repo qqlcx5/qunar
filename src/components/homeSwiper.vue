@@ -1,19 +1,17 @@
 <template>
-  <section class='swipe'>
-    <swiper :options="swiperOption" name='swiper1'>
+  <article class='swipe'>
+    <swiper :options="swiperOption" >
       <swiper-slide v-for="item in swipeList" :key="item.id"><img :src="item.imgUrl" class="swipe-item" ></swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
-  </section>
+  </article>
 </template>
 <script>
 export default {
   data() {
     return {
       swiperOption: {
-        // spaceBetween: 30,
-        // centeredSlides: true,
-        // loop: true,
+        loop: true,
         autoplay: {
           delay: 2500,
           disableOnInteraction: false
