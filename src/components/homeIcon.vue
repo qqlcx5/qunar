@@ -51,8 +51,8 @@ export default {
         {
           id: "0006",
           img:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png",
-          keyword: "游乐场"
+            "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
+          keyword: "一日游"
         },
         {
           id: "0007",
@@ -69,14 +69,14 @@ export default {
         {
           id: "0009",
           img:
-            "http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png",
-          keyword: "Q游乐场Q"
+            "http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png",
+          keyword: "游乐场"
         },
         {
           id: "00010",
           img:
-            "http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png",
-          keyword: "R名胜R"
+            "http://img1.qunarzz.com/piao/fusion/1804/95/8d02011d149bdb02.png",
+          keyword: "汽车票"
         }
       ]
     };
