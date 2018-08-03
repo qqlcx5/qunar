@@ -15,37 +15,16 @@
 </template>
 <script>
 export default {
+  props: {
+    recommendList: Array
+  },
   data() {
-    return {
-      recommendList: [
-        {
-          id: "0001",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg",
-          title: "故宫",
-          desc: "北京故宫是中国明清两代的皇家宫殿，旧称为紫禁城，位于北京中轴线的中心，是中国古代宫廷建筑之精华。"
-        },
-        {
-          id: "0002",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg",
-          title: "故宫故宫故宫故宫故宫故宫故宫故宫故宫故宫故宫故宫故宫故宫",
-          desc: "北京故宫是中国明清两代的皇家宫殿，旧称为紫禁城，位于北京中轴线的中心，是中国古代宫廷建筑之精华。"
-        },
-        {
-          id: "0003",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg",
-          title: "故宫",
-          desc: "北京故宫是中国明清两代的皇家宫殿，旧称为紫禁城，位于北京中轴线的中心，是中国古代宫廷建筑之精华。"
-        }
-      ]
-    };
+    return {};
   }
 };
 </script>
 <style lang="stylus" scoped>
-@import '~static/mixins.styl';
+@import '~styl/mixins.styl';
 
 .recommend-title {
   line-height: 0.8rem;
