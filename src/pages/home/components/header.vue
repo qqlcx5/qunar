@@ -7,7 +7,7 @@
       <span class="iconfont search-icon">&#xe632;</span>
       <input type="text" placeholder="输入城市/景点/游玩主题">
     </div>
-    <div class="header-right">
+    <div class="header-right" @click="$router.push({name:'city'})">
       {{city}}
       <span class="iconfont arrow-bottom">&#xe64a;</span>
     </div>

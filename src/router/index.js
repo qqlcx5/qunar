@@ -3,13 +3,21 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 import home from '@/pages/home/home'
+import city from '@/pages/city/city'
 
 
 export default new Router({
-  mode: 'history',
   base: __dirname,
-  routes: [{
+  routes: [
+    {
     path: '/',
+
     component: home
-  }]
+  },
+    {
+    path: '/city',
+    name:"city",
+    component: city
+  }
+]
 })
