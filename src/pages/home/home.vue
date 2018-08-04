@@ -8,11 +8,11 @@
   </section>
 </template>
 <script>
-import homeheader from "../components/homeheader";
-import homeSwiper from "../components/homeSwiper";
-import homeIcon from "../components/homeIcon";
-import homeRecommend from "../components/homeRecommend";
-import homeweekend from "../components/homeweekend";
+import homeheader from "./components/header";
+import homeSwiper from "./components/Swiper";
+import homeIcon from "./components/Icon";
+import homeRecommend from "./components/Recommend";
+import homeweekend from "./components/weekend";
 export default {
   components: {
     homeheader,

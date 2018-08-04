@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 Vue.use(Router)
 
-import home from '@/pages/home'
+import home from '@/pages/home/home'
 
 
 export default new Router({
