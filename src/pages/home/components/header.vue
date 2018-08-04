@@ -16,8 +16,7 @@
 <script>
 export default {
   props: {
-    city: String,
-    Object
+    city: String
   },
   data() {
     return {};

@@ -34,7 +34,7 @@ export default {
     getHomeInfo() {
       this.$axios.get("/api/index.json").then(res => {
         const data = res.data.data;
-        console.log(data);
+        // console.log(data);
         this.city = data.city;
         this.swiperList = data.swiperList;
         this.iconList = data.iconList;

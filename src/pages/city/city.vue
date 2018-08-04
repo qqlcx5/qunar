@@ -2,18 +2,40 @@
   <section>
     <cityHeader></cityHeader>
     <citySearch></citySearch>
+    <cityList :cities="cities" :hotCities="hotCities"></cityList>
+    <Alphabet :cities="cities" ></Alphabet>
   </section>
 </template>
 <script>
-import cityHeader from "./components/header.vue";
-import citySearch from "./components/search.vue";
+import cityHeader from "./components/header";
+import citySearch from "./components/search";
+import cityList from "./components/list";
+import Alphabet from "./components/Alphabet";
 export default {
   components: {
     cityHeader,
-    citySearch
+    citySearch,
+    cityList,
+    Alphabet
   },
   data() {
-    return {};
+    return {
+      cities: {},
+      hotCities: []
+    };
+  },
+  methods: {
+    getHomeInfo() {
+      this.$axios.get("/api/city.json").then(res => {
+        const data = res.data.data;
+        console.log(data.cities);
+        this.cities = data.cities;
+        this.hotCities = data.hotCities;
+      });
+    }
+  },
+  mounted() {
+    this.getHomeInfo();
   }
 };
 </script>
