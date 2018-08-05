@@ -37,6 +37,7 @@ export default {
     hotCities: Array
   },
   data() {
+
     return {
       letter: ""
     };
@@ -57,6 +58,7 @@ export default {
   updated() {
     eventBus.$on("target", item => {
       console.log("list " + item);
+
       this.letter = item;
     });
   }
