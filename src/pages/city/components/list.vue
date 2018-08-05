@@ -6,7 +6,7 @@
 
         <div class="button-list">
           <div class="button-warpper">
-            <div class="button">北京</div>
+            <div class="button">{{this.$store.state.city}}</div>
           </div>
         </div>
       </article>
@@ -37,7 +37,6 @@ export default {
     hotCities: Array
   },
   data() {
-
     return {
       letter: ""
     };

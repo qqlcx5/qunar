@@ -1,7 +1,7 @@
 <template>
   <section>
     <cityHeader></cityHeader>
-    <citySearch></citySearch>
+    <citySearch :cities="cities"></citySearch>
     <cityList :cities="cities" :hotCities="hotCities"></cityList>
     <Alphabet :cities="cities" ></Alphabet>
   </section>

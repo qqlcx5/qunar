@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-
+import store from './store'
 import router from './router'
 
 import Axios from 'axios'
@@ -22,6 +22,7 @@ Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 new Vue({
   router,
+  store,
   el: "#app",
   components: {
     App

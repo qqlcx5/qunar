@@ -21,7 +21,7 @@ export default {
   computed: {
     cityList() {
       const cityList = [];
-      console.log(this.cities);
+      // console.log(this.cities);
       for (let i in this.cities) {
         cityList.push(i);
       }
