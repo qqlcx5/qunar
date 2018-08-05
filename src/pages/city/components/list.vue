@@ -6,21 +6,21 @@
 
         <div class="button-list">
           <div class="button-warpper">
-            <div class="button">{{this.$store.state.city}}</div>
+            <div class="button">{{this.currentCity}}</div>
           </div>
         </div>
       </article>
       <article class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list">
-          <div class="button-warpper" v-for="item in hotCities" :key="item.id">
+          <div class="button-warpper" v-for="item in hotCities" :key="item.id" @click="handleCityClick(item.name)">
             <div class="button">{{item.name}}</div>
           </div>
         </div>
       </article>
       <article class="area" v-for="(list,key) in cities" :key="key" :ref="key">
         <div class="title border-topbottom">{{key}}</div>
-        <div class="item-list" v-for="item in list" :key="item.id">
+        <div class="item-list" v-for="item in list" :key="item.id" @click="handleCityClick(item.name)">
           <div class="item item-bottom">{{item.name}}</div>
         </div>
       </article>
@@ -31,6 +31,7 @@
 <script>
 import eventBus from "./eventBus.js";
 import BScroll from "better-scroll";
+import { mapState, mapMutations } from "vuex";
 export default {
   props: {
     cities: Object,
@@ -41,7 +42,20 @@ export default {
       letter: ""
     };
   },
-  methods: {},
+  computed: {
+    ...mapState({
+      currentCity: "city"
+    })
+  },
+  methods: {
+    handleCityClick(city) {
+      // this.$store.dispatch("handleCity", city);
+      // this.$store.commit("handleCity", city);
+      this.handleCity(city);
+      this.$router.push("/");
+    },
+    ...mapMutations(["handleCity"])
+  },
   watch: {
     letter() {
       if (this.letter) {

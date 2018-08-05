@@ -8,18 +8,20 @@
       <input type="text" placeholder="输入城市/景点/游玩主题">
     </div>
     <div class="header-right" @click="$router.push({name:'city'})">
-      {{city}}
+      {{this.doubleCity}}
       <span class="iconfont arrow-bottom">&#xe64a;</span>
     </div>
   </div>
 </template>
 <script>
+import { mapState,mapGetters } from "vuex";
 export default {
-  props: {
-    city: String
-  },
   data() {
     return {};
+  },
+  computed:{
+     ...mapState(['city']),
+     ...mapGetters(['doubleCity'])
   }
 };
 </script>
@@ -70,7 +72,8 @@ export default {
 
   .header-right {
     text-align: center;
-    width: 1.24rem;
+    min-width: 1.04rem;
+    padding: 0 0.1rem;
 
     .arrow-bottom {
       font-size: 0.24rem;

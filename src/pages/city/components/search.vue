@@ -3,7 +3,7 @@
     <input type="text" v-model="keyWord" class="search-input" placeholder="输入城市名或者拼音">
     <div class="search-content" ref="search" v-show="keyWord.length">
       <ul>
-        <li class=" item " v-for="item in list " :key="item.id ">{{item.name}}</li>
+        <li class=" item " v-for="item in list " :key="item.id" @click="handleCityClick(item.name)">{{item.name}}</li>
         <li class="item " v-show="!list.length ">搜索没有找到匹配数据</li>
       </ul>
     </div>
@@ -11,6 +11,7 @@
 </template>
 <script>
 import BScroll from "better-scroll";
+import { mapMutations } from "vuex";
 export default {
   props: {
     cities: [String, Object]
@@ -22,7 +23,17 @@ export default {
       list: []
     };
   },
-  methods: {},
+  methods: {
+    // handleCityClick(e) {
+    //   this.$store.commit("handleCity", e);
+    //   this.$router.push("/");
+    // },
+    handleCityClick(city) {
+      this.handleCity(city);
+      this.$router.push("/");
+    },
+    ...mapMutations(["handleCity"])
+  },
   watch: {
     keyWord() {
       if (this.keyWord) {

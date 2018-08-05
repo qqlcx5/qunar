@@ -1,6 +1,6 @@
 <template>
   <section>
-    <homeheader :city='city'></homeheader>
+    <homeheader ></homeheader>
     <homeSwiper :swiperList="swiperList"></homeSwiper>
     <homeIcon :iconList="iconList"></homeIcon>
     <homeRecommend :recommendList="recommendList"></homeRecommend>
@@ -35,7 +35,6 @@ export default {
       this.$axios.get("/api/index.json").then(res => {
         const data = res.data.data;
         // console.log(data);
-        this.city = data.city;
         this.swiperList = data.swiperList;
         this.iconList = data.iconList;
         this.recommendList = data.recommendList;
