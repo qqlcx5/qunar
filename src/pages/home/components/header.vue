@@ -8,7 +8,7 @@
       <input type="text" placeholder="输入城市/景点/游玩主题">
     </div>
     <div class="header-right" @click="$router.push({name:'city'})">
-      {{this.doubleCity}}
+      {{this.city}}
       <span class="iconfont arrow-bottom">&#xe64a;</span>
     </div>
   </div>

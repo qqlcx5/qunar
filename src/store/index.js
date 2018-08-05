@@ -9,11 +9,11 @@ export default new Vuex.Store({
   state,
   actions,
   mutations,
-  getters: {
-    doubleCity(state) {
-      return state.city + " " + state.city
-    }
-  }
+  // getters: {
+  //   doubleCity(state) {
+  //     return state.city + " " + state.city
+  //   }
+  // }
   // state: {
   //   city: defaultCity
   // },
