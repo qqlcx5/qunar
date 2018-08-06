@@ -4,7 +4,6 @@
     <ul>
       <li class=" item border-bottom" v-for="item in weekendList" :key="item.id">
         <div class="item-img"><img :src="item.imgUrl" alt=""></div>
-
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
