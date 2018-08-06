@@ -23,14 +23,13 @@ export default {
           el: ".swiper-pagination",
           clickable: false
         }
-      },
-
+      }
     };
   },
   // 因为props未传值时，是空数组，所以loop不能生效
-  computed:{
-    showSwiper(){
-      return this.swiperList.length
+  computed: {
+    showSwiper() {
+      return this.swiperList.length;
     }
   }
 };
