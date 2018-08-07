@@ -6,6 +6,7 @@ import router from './router'
 import Axios from 'axios'
 Vue.prototype.$axios = Axios
 // 移动端点击事件300延迟
+import 'babel-polyfill'
 import FastClick from 'fastclick'
 FastClick.attach(document.body);
 //引入图标

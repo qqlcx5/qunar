@@ -30,6 +30,7 @@ export default {
     // },
     handleCityClick(city) {
       this.handleCity(city);
+      this.keyWord = "";
       this.$router.push("/");
     },
     ...mapMutations(["handleCity"])
