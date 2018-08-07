@@ -17,10 +17,7 @@ export default {
     imgs: {
       type: Array,
       default() {
-        return [
-          "http://img1.qunarzz.com/sight/p0/1805/d3/d39c87bf374741a4a3.img.png_r_800x800_12abbe76.png",
-          "http://img1.qunarzz.com/sight/p0/1805/d3/d39c87bf374741a4a3.img.png_r_800x800_12abbe76.png"
-        ];
+        return [];
       }
     }
   },
@@ -38,7 +35,7 @@ export default {
   },
   methods:{
     handlecloseShow(){
-      this.$emit("close",false)
+      this.$emit("close")
     }
   }
 };

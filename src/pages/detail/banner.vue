@@ -1,25 +1,36 @@
 <template>
   <article>
+
     <div class="banner" @click="handleShow">
-      <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1805/7d/7dca9c37a87479eba3.img.jpg_600x330_77f48209.jpg" alt="">
+      <img class="banner-img" :src="bannerImg" alt="">
       <div class="banner-info">
-        <div class="banner-title">世茂云上厦门观光厅</div>
+        <div class="banner-title">{{sightName}}</div>
         <div class="banner-number">
           <span class="iconfont arrow-bottom">&#59026;</span>
           39</div>
       </div>
+
     </div>
-    <gallary v-show="showGallary" @close="closeShow"></gallary>
+
+    <fade-animate>
+      <gallary v-show="showGallary" @close="closeShow" :imgs="gallaryImgs"></gallary>
+    </fade-animate>
   </article>
 
 </template>
 <script>
 import gallary from "common/gallary/gallary";
+import FadeAnimate from "common/fade/fadeAnimate";
 export default {
   components: {
-    gallary
+    gallary,
+    FadeAnimate
   },
-
+  props: {
+    bannerImg: [Array, String],
+    gallaryImgs: Array,
+    sightName: String
+  },
   data() {
     return {
       showGallary: false
@@ -29,8 +40,8 @@ export default {
     handleShow() {
       this.showGallary = true;
     },
-    closeShow(e) {
-      this.showGallary = e;
+    closeShow() {
+      this.showGallary = false;
     }
   }
 };

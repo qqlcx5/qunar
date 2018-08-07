@@ -5,5 +5,8 @@ export default {
       localStorage.city = city
     } catch (e) {}
 
-  }
+  },
+  // gallaryImg(state, e) {
+  //   state.gallaryImg = e
+  // }
 }
