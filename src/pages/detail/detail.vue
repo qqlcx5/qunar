@@ -20,71 +20,7 @@ export default {
   },
   data() {
     return {
-      categoryList: [
-        {
-          title: "故宫第一城",
-          children: [
-            {
-              title: "故宫第二城"
-            },
-            {
-              title: "故宫第二城紫荆城",
-              children: [
-                {
-                  title: "故宫第二城紫荆城小巓",
-                  children: [
-                    {
-                      title: "故宫第二城紫荆城4"
-                    },
-                    {
-                      title: "故宫第二城紫荆城4"
-                    },
-                    {
-                      title: "故宫第二城紫荆城4"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              title: "故宫第二城博物馆"
-            }
-          ]
-        },
-        {
-          title: "故宫第一城",
-          children: [
-            {
-              title: "故宫第二城"
-            },
-            {
-              title: "故宫第二城紫荆城",
-              children: [
-                {
-                  title: "故宫第二城紫荆城小巓",
-                  children: [
-                    {
-                      title: "故宫第二城紫荆城4"
-                    },
-                    {
-                      title: "故宫第二城紫荆城4"
-                    },
-                    {
-                      title: "故宫第二城紫荆城4"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              title: "故宫第二城博物馆"
-            }
-          ]
-        },
-        {
-          title: "美国第一城"
-        }
-      ],
+      categoryList: [],
       bannerImg: "",
       gallaryImgs: [],
       sightName: ""
@@ -93,7 +29,7 @@ export default {
   methods: {
     getDetail() {
       this.$axios
-        .get("/api/detail.json", {
+        .get("/qunar/detail", {
           params: {
             id: this.$route.params.id
           }

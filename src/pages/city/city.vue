@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     getHomeInfo() {
-      this.$axios.get("/api/city.json").then(res => {
+      this.$axios.get("/qunar/city").then(res => {
         const data = res.data.data;
         // console.log(data.cities);
         this.cities = data.cities;
