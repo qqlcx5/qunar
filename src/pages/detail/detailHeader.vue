@@ -7,7 +7,7 @@
       <div>景点详情</div>
       <span class="iconfont arrow-left" @click="$router.go(-1)">&#xe624;</span>
     </div>
-    
+
   </article>
 
 </template>
@@ -23,8 +23,8 @@ export default {
   },
   methods: {
     handleScroll() {
-      // console.log("scroll");
-      // console.log(document.documentElement.scrollTop);
+      console.log("scroll");
+      console.log(document.documentElement.scrollTop);
       const top = document.documentElement.scrollTop;
       if (top > 60) {
         let opacity = top / 140;
@@ -39,7 +39,9 @@ export default {
     }
   },
   activated() {
+    console.log("activated" + "scroll");
     window.addEventListener("scroll", this.handleScroll);
+    this.$emit("getlist")
   },
   deactivated() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -61,7 +63,7 @@ export default {
 }
 
 .header-fix {
-  z-index: 1;
+  z-index: 9;
   height: 0.86rem;
   line-height: 0.86rem;
   text-align: center;

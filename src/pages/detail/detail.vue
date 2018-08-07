@@ -1,10 +1,11 @@
 <template>
   <article>
     <banner :bannerImg="bannerImg" :sightName="sightName" :gallaryImgs="gallaryImgs"></banner>
-    <detailHeader></detailHeader>
+    <detailHeader @getlist="getlist"></detailHeader>
     <div class="content">
       <detailList :list="categoryList"></detailList>
     </div>
+
   </article>
 </template>
 <script>
@@ -27,6 +28,10 @@ export default {
     };
   },
   methods: {
+    //activated 触发请求，避免keep-alive影响
+    getlist() {
+      this.getDetail();
+    },
     getDetail() {
       this.$axios
         .get("/qunar/detail", {
@@ -47,10 +52,14 @@ export default {
         });
     }
   },
-  mounted() {
-    this.getDetail();
-  }
+  // mounted() {
+  //   this.getDetail();
+  // }
 };
 </script>
 <style lang="stylus" scoped>
+.content {
+  height: 50rem;
+  background: #eee;
+}
 </style>
