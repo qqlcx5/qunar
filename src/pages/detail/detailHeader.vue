@@ -23,8 +23,8 @@ export default {
   },
   methods: {
     handleScroll() {
-      console.log("scroll");
-      console.log(document.documentElement.scrollTop);
+      //console.log("scroll");
+      //console.log(document.documentElement.scrollTop);
       const top = document.documentElement.scrollTop;
       if (top > 60) {
         let opacity = top / 140;
@@ -39,7 +39,7 @@ export default {
     }
   },
   activated() {
-    console.log("activated" + "scroll");
+    //console.log("activated" + "scroll");
     window.addEventListener("scroll", this.handleScroll);
     this.$emit("getlist")
   },

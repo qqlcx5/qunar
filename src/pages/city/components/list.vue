@@ -70,7 +70,7 @@ export default {
   },
   updated() {
     eventBus.$on("target", item => {
-      console.log("list " + item);
+      //console.log("list " + item);
 
       this.letter = item;
     });
