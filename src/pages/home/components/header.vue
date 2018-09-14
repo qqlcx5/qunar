@@ -14,13 +14,15 @@
   </div>
 </template>
 <script>
-import { mapState,mapGetters } from "vuex";
+import { mapState, mapGetters } from "vuex";
 export default {
   data() {
-    return {};
+    return {
+    
+    };
   },
-  computed:{
-     ...mapState(['city']),
+  computed: {
+    ...mapState(["city"])
     //  ...mapGetters(['doubleCity'])
   }
 };
