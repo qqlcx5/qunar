@@ -4,10 +4,10 @@
 ![gif](https://user-images.githubusercontent.com/31888710/43790258-a76b8b10-9aa4-11e8-887f-f61c40ccba61.gif)
 
 ### 项目涉及到技术栈：
-vue：Vue、Vue-router、Vuex、Vue-cli
-插件：vue-awesome-swiper、better-scroll Axios
-CSS的预处理框架 stylus
-api 后台数据接口
+- vue：Vue、Vue-router、Vuex、Vue-cli
+- 插件：vue-awesome-swiper、better-scroll Axios
+- CSS的预处理框架 stylus
+- api 后台数据接口
 
 ### 主要特点
 - 组件化自适应布局
