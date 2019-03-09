@@ -1,5 +1,3 @@
-## 走过路过，不妨点个星星或者打赏下呗
-![clipboard image](https://user-images.githubusercontent.com/31888710/43787183-0402c67a-9a9d-11e8-8d44-1e8a02899d39.jpg)
 ### 项目展示
 ![gif](https://user-images.githubusercontent.com/31888710/43790258-a76b8b10-9aa4-11e8-887f-f61c40ccba61.gif)
 
