@@ -1,6 +1,8 @@
 <template>
   <article>
-    <banner :bannerImg="bannerImg" :sightName="sightName" :gallaryImgs="gallaryImgs"></banner>
+    <banner :bannerImg="bannerImg"
+            :sightName="sightName"
+            :gallaryImgs="gallaryImgs"></banner>
     <detailHeader @getlist="getlist"></detailHeader>
     <div class="content">
       <detailList :list="categoryList"></detailList>
@@ -19,7 +21,7 @@ export default {
     detailHeader,
     detailList
   },
-  data() {
+  data () {
     return {
       categoryList: [],
       bannerImg: "",
@@ -29,27 +31,23 @@ export default {
   },
   methods: {
     //activated 触发请求，避免keep-alive影响
-    getlist() {
+    getlist () {
       this.getDetail();
     },
-    getDetail() {
-      this.$axios
-        .get("/qunar/detail", {
-          params: {
-            id: this.$route.params.id
-          }
-        })
-        .then(res => {
-          res = res.data;
-          if (res.ret && res.data) {
-            const data = res.data;
-            // console.log(data);
-            this.bannerImg = data.bannerImg;
-            this.categoryList = data.categoryList;
-            this.gallaryImgs = data.gallaryImgs;
-            this.sightName = data.sightName;
-          }
-        });
+    getDetail () {
+      this.$axios.get("/detail").then(res => {
+        // , {params: {id: this.$route.params.id}}
+        console.log(res, 'res')
+        let resp = res.data.data
+        if (resp.ret && resp.data) {
+          const data = resp.data
+          console.log(data, '/detail');
+          this.bannerImg = data.bannerImg;
+          this.categoryList = data.categoryList;
+          this.gallaryImgs = data.gallaryImgs;
+          this.sightName = data.sightName;
+        }
+      });
     }
   },
   // mounted() {
@@ -58,8 +56,7 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
-.content {
-  height: 50rem;
-  background: #eee;
-}
+.content
+  height 50rem
+  background #eee
 </style>

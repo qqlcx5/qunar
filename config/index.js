@@ -12,9 +12,9 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/qunar': {
-        target: 'http://yapi.demo.qunar.com/',
+        target: '',
         pathRewrite: {
-          '^/qunar': 'mock/15612/qunar'
+          '^/qunar': ''
         },
         changeOrigin: true,
       }
@@ -25,7 +25,7 @@ module.exports = {
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8000, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-    autoOpenBrowser: true,
+    autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-

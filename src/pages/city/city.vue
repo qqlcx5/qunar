@@ -26,8 +26,8 @@ export default {
   },
   methods: {
     getHomeInfo() {
-      this.$axios.get("/qunar/city").then(res => {
-        const data = res.data.data;
+      this.$axios.get("/city").then(res => {
+        const data = res.data.data.data;
         // console.log(data.cities);
         this.cities = data.cities;
         this.hotCities = data.hotCities;

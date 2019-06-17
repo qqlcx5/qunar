@@ -16,9 +16,9 @@ import './assets/iconfont.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper)
+// mock数据
+import './mock/mockServer'
 
-import axios from 'axios'
-Vue.prototype.$axios = axios
 
 Vue.config.productionTip = false
 new Vue({
