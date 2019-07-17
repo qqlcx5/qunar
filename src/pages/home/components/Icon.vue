@@ -29,16 +29,18 @@ export default {
     };
   },
   computed: {
-    pages() {
-      const pages = [];
-      this.iconList.forEach((item, index) => {
-        const page = Math.floor(index / 8);
-        if (!pages[page]) {
-          pages[page] = [];
-        }
-        pages[page].push(item);
-      });
-      return pages;
+    pages(){
+      const icons = []
+      this.iconList.forEach((ele,index) => {
+      const icon = Math.floor(index/8)
+      // console.log(icons[icon])
+      // console.log([[]])
+      if(!icons[icon]){
+        icons[icon]= []
+      }
+      icons[icon].push(ele)
+    })
+    return icons
     }
   }
 };
@@ -91,3 +93,14 @@ export default {
   }
 }
 </style>
+    // pages() {
+    //   const pages = [];
+    //   this.iconList.forEach((item, index) => {
+    //     const page = Math.floor(index / 8);
+    //     if (!pages[page]) {
+    //       pages[page] = [];
+    //     }
+    //     pages[page].push(item);
+    //   });
+    //   return pages;
+    // }

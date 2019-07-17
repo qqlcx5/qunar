@@ -1,7 +1,14 @@
 <template>
   <article>
     <ul class="list">
-      <li class="item" v-for="key in cityList" :key="key" :ref="key" @click="handleLetter" @touchstart.prevent="handlestart" @touchmove="handlemove" @touchend="handleend">{{key}}</li>
+      <li class="item"
+          v-for="key in cityList"
+          :key="key"
+          :ref="key"
+          @click="handleLetter"
+          @touchstart.prevent="handlestart"
+          @touchmove="handlemove"
+          @touchend="handleend">{{key}}</li>
     </ul>
   </article>
 </template>
@@ -11,7 +18,7 @@ export default {
   props: {
     cities: Object
   },
-  data() {
+  data () {
     return {
       handleStatus: false,
       moveY: 0,
@@ -19,7 +26,7 @@ export default {
     };
   },
   computed: {
-    cityList() {
+    cityList () {
       const cityList = [];
       // console.log(this.cities);
       for (let i in this.cities) {
@@ -28,24 +35,25 @@ export default {
       return cityList;
     }
   },
-  updated() {
+  updated () {
     this.moveY = this.$refs["A"][0].offsetTop;
   },
   methods: {
-    handleLetter(target) {
+    handleLetter (target) {
       // console.log(target.target.innerText)
       eventBus.$emit("target", target.target.innerText);
     },
-    handlestart() {
+    handlestart () {
       this.handleStatus = true;
     },
-    handlemove(e) {
+    handlemove (e) {
       if (this.handleStatus) {
         if (this.timer) {
           clearTimeout(this.timer);
         }
         this.timer = setTimeout(() => {
           const touchY = e.touches[0].clientY - 79;
+          console.log(e.touches[0].clientY, this.moveY)
           const index = Math.floor((touchY - this.moveY) / 20);
           if (index >= 0 && index < this.cityList.length) {
             console.log("index " + this.cityList[index]);
@@ -56,27 +64,24 @@ export default {
         }, 16);
       }
     },
-    handleend() {
+    handleend () {
       this.handleStatus = false;
     }
   }
 };
 </script>
 <style lang="stylus" scoped>
-.list {
-  position: absolute;
-  top: 1.58rem;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 0.4rem;
-
-  .item {
-    line-height: 0.4rem;
-    text-align: center;
-    color: #888;
-  }
-}
+.list
+  position absolute
+  top 1.58rem
+  right 0
+  bottom 0
+  display flex
+  flex-direction column
+  justify-content center
+  width 0.4rem
+  .item
+    line-height 0.4rem
+    text-align center
+    color #888
 </style>
