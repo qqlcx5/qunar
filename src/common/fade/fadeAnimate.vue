@@ -15,5 +15,3 @@ export default {};
   transition: opacity 1s;
 }
 </style>
-
-

@@ -38,5 +38,3 @@
 - 渐隐渐显的header效果实现
 - 递归组件实现详情列表
 - 画廊动画效果封装
-
-# [ 项目源码 ](https://github.com/qqlcx5/Gowhere)

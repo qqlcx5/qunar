@@ -7,9 +7,7 @@
       <div>景点详情</div>
       <span class="iconfont arrow-left" @click="$router.go(-1)">&#xe624;</span>
     </div>
-
   </article>
-
 </template>
 <script>
 export default {
@@ -41,7 +39,7 @@ export default {
   activated() {
     //console.log("activated" + "scroll");
     window.addEventListener("scroll", this.handleScroll);
-    this.$emit("getlist")
+    this.$emit("getlist");
   },
   deactivated() {
     window.removeEventListener("scroll", this.handleScroll);

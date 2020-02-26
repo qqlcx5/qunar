@@ -1,40 +1,39 @@
 <template>
-  <div class="list"
-       ref="wrapper">
+  <div class="list" ref="wrapper">
     <div>
       <article class="area">
         <div class="title border-topbottom">当前城市</div>
 
         <div class="button-list">
           <div class="button-warpper">
-            <div class="button">{{this.currentCity}}</div>
+            <div class="button">{{ this.currentCity }}</div>
           </div>
         </div>
       </article>
       <article class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list">
-          <div class="button-warpper"
-               v-for="item in hotCities"
-               :key="item.id"
-               @click="handleCityClick(item.name)">
-            <div class="button">{{item.name}}</div>
+          <div
+            class="button-warpper"
+            v-for="item in hotCities"
+            :key="item.id"
+            @click="handleCityClick(item.name)"
+          >
+            <div class="button">{{ item.name }}</div>
           </div>
         </div>
       </article>
-      <article class="area"
-               v-for="(list,key) in cities"
-               :key="key"
-               :ref="key">
-        <div class="title border-topbottom">{{key}}</div>
-        <div class="item-list"
-             v-for="item in list"
-             :key="item.id"
-             @click="handleCityClick(item.name)">
-          <div class="item item-bottom">{{item.name}}</div>
+      <article class="area" v-for="(list, key) in cities" :key="key" :ref="key">
+        <div class="title border-topbottom">{{ key }}</div>
+        <div
+          class="item-list"
+          v-for="item in list"
+          :key="item.id"
+          @click="handleCityClick(item.name)"
+        >
+          <div class="item item-bottom">{{ item.name }}</div>
         </div>
       </article>
-
     </div>
   </div>
 </template>
@@ -47,7 +46,7 @@ export default {
     cities: Object,
     hotCities: Array
   },
-  data () {
+  data() {
     return {
       letter: ""
     };
@@ -58,7 +57,7 @@ export default {
     })
   },
   methods: {
-    handleCityClick (city) {
+    handleCityClick(city) {
       // this.$store.dispatch("handleCity", city);
       // this.$store.commit("handleCity", city);
       this.handleCity(city);
@@ -67,7 +66,7 @@ export default {
     ...mapMutations(["handleCity"])
   },
   watch: {
-    letter () {
+    letter() {
       if (this.letter) {
         const element = this.$refs[this.letter][0];
         console.log(this.$refs[this.letter][0]);
@@ -75,10 +74,10 @@ export default {
       }
     }
   },
-  mounted () {
+  mounted() {
     this.scroll = new BScroll(this.$refs.wrapper);
   },
-  updated () {
+  updated() {
     eventBus.$on("target", item => {
       console.log("list " + item);
 

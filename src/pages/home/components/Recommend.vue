@@ -2,15 +2,20 @@
   <article>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <router-link tag="li" class="item border-bottom" v-for="item in recommendList" :key="item.id" :to="{name:'detail',params:{id:item.id}}">
-        <img :src="item.imgUrl" alt="">
+      <router-link
+        tag="li"
+        class="item border-bottom"
+        v-for="item in recommendList"
+        :key="item.id"
+        :to="{ name: 'detail', params: { id: item.id } }"
+      >
+        <img :src="item.imgUrl" alt="" />
         <div class="item-info">
-          <p class="item-title">{{item.title}}</p>
-          <p class="item-desc">{{item.desc}}</p>
+          <p class="item-title">{{ item.title }}</p>
+          <p class="item-desc">{{ item.desc }}</p>
           <button class="item-btn">查看详情</button>
         </div>
       </router-link>
-
     </ul>
   </article>
 </template>
@@ -24,8 +29,8 @@ export default {
   }
 };
 </script>
+
 <style lang="stylus" scoped>
-@import '~styl/mixins.styl';
 
 .recommend-title {
   line-height: 0.8rem;
@@ -53,13 +58,19 @@ export default {
     .item-title {
       line-height: 0.64rem;
       font-size: 0.32rem;
-      ellipsis();
+      // ellipsis();
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
     }
 
     .item-desc {
       color: #666;
       line-height: 0.4rem;
       ellipsis();
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
     }
 
     .item-btn {

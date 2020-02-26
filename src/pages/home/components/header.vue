@@ -5,21 +5,19 @@
     </div>
     <div class="header-input">
       <span class="iconfont search-icon">&#xe632;</span>
-      <input type="text" placeholder="输入城市/景点/游玩主题">
+      <input type="text" placeholder="输入城市/景点/游玩主题" />
     </div>
-    <div class="header-right" @click="$router.push({name:'city'})">
-      {{this.city}}
+    <div class="header-right" @click="$router.push({ name: 'city' })">
+      {{ this.city }}
       <span class="iconfont arrow-bottom">&#xe64a;</span>
     </div>
   </div>
 </template>
 <script>
-import { mapState, mapGetters } from "vuex";
+import { mapState } from "vuex";
 export default {
   data() {
-    return {
-    
-    };
+    return {};
   },
   computed: {
     ...mapState(["city"])

@@ -1,26 +1,30 @@
 <template>
   <article>
-
     <div class="banner" @click="handleShow">
-      <img class="banner-img" :src="bannerImg" alt="">
+      <img class="banner-img" :src="bannerImg" alt="" />
       <div class="banner-info">
-        <div class="banner-title">{{sightName}}</div>
+        <div class="banner-title">{{ sightName }}</div>
         <div class="banner-number">
           <span class="iconfont arrow-bottom">&#59026;</span>
-          39</div>
+          39
+        </div>
       </div>
-
     </div>
 
     <fade-animate>
-      <gallary v-show="showGallary" @close="closeShow" :imgs="gallaryImgs"></gallary>
+      <template>
+        <gallary
+          v-show="showGallary"
+          @close="closeShow"
+          :imgs="gallaryImgs"
+        ></gallary>
+      </template>
     </fade-animate>
   </article>
-
 </template>
 <script>
-import gallary from "common/gallary/gallary";
-import FadeAnimate from "common/fade/fadeAnimate";
+import gallary from "@/common/gallary/gallary";
+import FadeAnimate from "@/common/fade/fadeAnimate";
 export default {
   components: {
     gallary,
@@ -65,7 +69,7 @@ export default {
     bottom: 0;
     line-height: 0.6rem;
     color: #fff;
-    background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 
     .banner-title {
       flex: 1;

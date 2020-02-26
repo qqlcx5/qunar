@@ -2,11 +2,15 @@
   <article>
     <div class="recommend-title">周末去哪儿</div>
     <ul>
-      <li class=" item border-bottom" v-for="item in weekendList" :key="item.id">
-        <div class="item-img"><img :src="item.imgUrl" alt=""></div>
+      <li
+        class=" item border-bottom"
+        v-for="item in weekendList"
+        :key="item.id"
+      >
+        <div class="item-img"><img :src="item.imgUrl" alt="" /></div>
         <div class="item-info">
-          <p class="item-title">{{item.title}}</p>
-          <p class="item-desc">{{item.desc}}</p>
+          <p class="item-title">{{ item.title }}</p>
+          <p class="item-desc">{{ item.desc }}</p>
         </div>
       </li>
     </ul>
@@ -23,7 +27,6 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
-@import '~styl/mixins.styl';
 
 .recommend-title {
   line-height: 0.8rem;
@@ -50,13 +53,19 @@ export default {
     .item-title {
       line-height: 0.54rem;
       font-size: 0.32rem;
-      ellipsis();
+      // ellipsis();
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
     }
 
     .item-desc {
       color: #999;
       line-height: 0.4rem;
-      ellipsis();
+      // ellipsis();
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
     }
   }
 }

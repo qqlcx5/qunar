@@ -1,11 +1,14 @@
 <template>
   <article>
-    <div class="item" v-for="(item,index) in list" :key="index">
+    <div class="item" v-for="(item, index) in list" :key="index">
       <div class="item-title">
         <span class="item-title-ticket"></span>
-        {{item.title}}</div>
+        {{ item.title }}
+      </div>
       <div v-if="item.children" class="item-children">
-        <detail-list :list="item.children"></detail-list>
+        <template>
+          <detail-list :list="item.children"></detail-list>
+        </template>
       </div>
     </div>
   </article>
@@ -34,7 +37,7 @@ export default {
     top: 0.07rem;
     width: 0.36rem;
     height: 0.36rem;
-    background: url('http://s.qunarzz.com/piao/image/touch/sight/detail.png') 0 -0.45rem no-repeat; // s.qunarzz.com/piao/image/touch/sight/detail.png) 0 -.45rem no-repeat;
+    background: url('http://s.qunarzz.com/piao/image/touch/sight/detail.png') 0 -0.45rem no-repeat;
     margin-right: 0.1rem;
     background-size: 0.4rem 3rem;
   }

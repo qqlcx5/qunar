@@ -2,7 +2,6 @@
   <div class="header">
     <div>国内城市</div>
     <span class="iconfont arrow-left" @click="$router.go(-1)">&#xe624;</span>
-
   </div>
 </template>
 <script>

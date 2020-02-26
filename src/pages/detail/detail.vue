@@ -1,13 +1,14 @@
 <template>
   <article>
-    <banner :bannerImg="bannerImg"
-            :sightName="sightName"
-            :gallaryImgs="gallaryImgs"></banner>
+    <banner
+      :bannerImg="bannerImg"
+      :sightName="sightName"
+      :gallaryImgs="gallaryImgs"
+    ></banner>
     <detailHeader @getlist="getlist"></detailHeader>
     <div class="content">
       <detailList :list="categoryList"></detailList>
     </div>
-
   </article>
 </template>
 <script>
@@ -21,7 +22,7 @@ export default {
     detailHeader,
     detailList
   },
-  data () {
+  data() {
     return {
       categoryList: [],
       bannerImg: "",
@@ -31,17 +32,17 @@ export default {
   },
   methods: {
     //activated 触发请求，避免keep-alive影响
-    getlist () {
+    getlist() {
       this.getDetail();
     },
-    getDetail () {
+    getDetail() {
       this.$axios.get("/detail").then(res => {
         // , {params: {id: this.$route.params.id}}
-        console.log(res, 'res')
-        let resp = res.data.data
+        console.log(res, "res");
+        let resp = res.data.data;
         if (resp.ret && resp.data) {
-          const data = resp.data
-          console.log(data, '/detail');
+          const data = resp.data;
+          console.log(data, "/detail");
           this.bannerImg = data.bannerImg;
           this.categoryList = data.categoryList;
           this.gallaryImgs = data.gallaryImgs;
@@ -49,7 +50,7 @@ export default {
         }
       });
     }
-  },
+  }
   // mounted() {
   //   this.getDetail();
   // }

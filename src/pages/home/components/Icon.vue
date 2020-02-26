@@ -1,16 +1,16 @@
 <template>
   <article class="icon">
     <swiper :options="swiperOption">
-      <swiper-slide v-for="(icons,index) in pages" :key="index">
-        <article class="icon-item" v-for="icon in icons" :key='icon.id'>
-          <div class="icon-img"><img :src="icon.imgUrl" alt="" class="img-content">
+      <swiper-slide v-for="(icons, index) in pages" :key="index">
+        <article class="icon-item" v-for="icon in icons" :key="icon.id">
+          <div class="icon-img">
+            <img :src="icon.imgUrl" alt="" class="img-content" />
           </div>
-          <div class="keywords">{{icon.desc}}</div>
+          <div class="keywords">{{ icon.desc }}</div>
         </article>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
-
   </article>
 </template>
 <script>
@@ -29,18 +29,16 @@ export default {
     };
   },
   computed: {
-    pages(){
-      const icons = []
-      this.iconList.forEach((ele,index) => {
-      const icon = Math.floor(index/8)
-      // console.log(icons[icon])
-      // console.log([[]])
-      if(!icons[icon]){
-        icons[icon]= []
-      }
-      icons[icon].push(ele)
-    })
-    return icons
+    pages() {
+      const icons = [];
+      this.iconList.forEach((ele, index) => {
+        const icon = Math.floor(index / 8);
+        if (!icons[icon]) {
+          icons[icon] = [];
+        }
+        icons[icon].push(ele);
+      });
+      return icons;
     }
   }
 };
@@ -93,14 +91,6 @@ export default {
   }
 }
 </style>
-    // pages() {
-    //   const pages = [];
-    //   this.iconList.forEach((item, index) => {
-    //     const page = Math.floor(index / 8);
-    //     if (!pages[page]) {
-    //       pages[page] = [];
-    //     }
-    //     pages[page].push(item);
-    //   });
-    //   return pages;
-    // }
+// pages() { // const pages = []; // this.iconList.forEach((item, index) => { //
+const page = Math.floor(index / 8); // if (!pages[page]) { // pages[page] = [];
+// } // pages[page].push(item); // }); // return pages; // }

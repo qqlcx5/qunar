@@ -1,10 +1,22 @@
 <template>
   <div class="search">
-    <input type="text" v-model="keyWord" class="search-input" placeholder="输入城市名或者拼音">
+    <input
+      type="text"
+      v-model="keyWord"
+      class="search-input"
+      placeholder="输入城市名或者拼音"
+    />
     <div class="search-content" ref="search" v-show="keyWord.length">
       <ul>
-        <li class=" item " v-for="item in list " :key="item.id" @click="handleCityClick(item.name)">{{item.name}}</li>
-        <li class="item " v-show="!list.length ">搜索没有找到匹配数据</li>
+        <li
+          class=" item "
+          v-for="item in list"
+          :key="item.id"
+          @click="handleCityClick(item.name)"
+        >
+          {{ item.name }}
+        </li>
+        <li class="item " v-show="!list.length">搜索没有找到匹配数据</li>
       </ul>
     </div>
   </div>

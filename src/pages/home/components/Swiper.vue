@@ -1,7 +1,9 @@
 <template>
-  <article class='swipe' v-if="showSwiper">
+  <article class="swipe" v-if="showSwiper">
     <swiper :options="swiperOption">
-      <swiper-slide v-for="item in swiperList" :key="item.id"><img :src="item.imgUrl" class="swipe-item"></swiper-slide>
+      <swiper-slide v-for="item in swiperList" :key="item.id"
+        ><img :src="item.imgUrl" class="swipe-item"
+      /></swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
   </article>

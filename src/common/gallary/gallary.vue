@@ -1,15 +1,14 @@
 <template>
   <article class="container" @click="handlecloseShow">
-
     <div class="wrapper">
       <swiper :options="swiperOption">
-        <swiper-slide v-for="(item,index)  in imgs" :key="index"><img :src="item" class="gallary-img"></swiper-slide>
+        <swiper-slide v-for="(item, index) in imgs" :key="index"
+          ><img :src="item" class="gallary-img"
+        /></swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
-
   </article>
-
 </template>
 <script>
 export default {
@@ -33,9 +32,9 @@ export default {
       }
     };
   },
-  methods:{
-    handlecloseShow(){
-      this.$emit("close")
+  methods: {
+    handlecloseShow() {
+      this.$emit("close");
     }
   }
 };

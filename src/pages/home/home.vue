@@ -22,7 +22,7 @@ export default {
     homeRecommend,
     homeweekend
   },
-  data () {
+  data() {
     return {
       swiperList: [],
       iconList: [],
@@ -35,10 +35,10 @@ export default {
     ...mapState(["city"])
   },
   methods: {
-    getHomeInfo () {
+    getHomeInfo() {
       this.$axios.get("/index").then(res => {
         console.log(res.data.data.data);
-        const data = res.data.data.data
+        const data = res.data.data.data;
         this.swiperList = data.swiperList;
         this.iconList = data.iconList;
         this.recommendList = data.recommendList;
@@ -46,11 +46,11 @@ export default {
       });
     }
   },
-  mounted () {
+  mounted() {
     this.lastCity = this.city;
     this.getHomeInfo();
   },
-  activated () {
+  activated() {
     if (this.lastCity !== this.city) {
       this.lastCity = this.city;
       this.getHomeInfo();
@@ -58,5 +58,3 @@ export default {
   }
 };
 </script>
-<style scoped>
-</style>
