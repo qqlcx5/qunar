@@ -3,7 +3,7 @@
     <cityHeader></cityHeader>
     <citySearch :cities="cities"></citySearch>
     <cityList :cities="cities" :hotCities="hotCities"></cityList>
-    <Alphabet :cities="cities" ></Alphabet>
+    <Alphabet :cities="cities"></Alphabet>
   </section>
 </template>
 <script>
@@ -39,5 +39,4 @@ export default {
   }
 };
 </script>
-<style lang="stylus" scoped>
-</style>
+<style lang="stylus" scoped></style>

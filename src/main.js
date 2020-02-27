@@ -7,8 +7,6 @@ Vue.prototype.$axios = axios;
 // 移动端点击事件300延迟
 import FastClick from "fastclick";
 FastClick.attach(document.body);
-// 兼容旧版
-import "babel-polyfill";
 //引入icon图标
 import "./assets/iconfont.css";
 
