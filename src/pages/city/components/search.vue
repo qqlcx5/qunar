@@ -66,7 +66,7 @@ export default {
             this.list = result;
           });
         }
-      }, 100);
+      }, 200);
     }
   },
   mounted() {
