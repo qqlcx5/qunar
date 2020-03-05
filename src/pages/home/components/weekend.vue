@@ -53,19 +53,13 @@ export default {
     .item-title {
       line-height: 0.54rem;
       font-size: 0.32rem;
-      // ellipsis();
-      overflow: hidden
-      white-space: nowrap
-      text-overflow: ellipsis
+      ellipsis();
     }
 
     .item-desc {
       color: #999;
       line-height: 0.4rem;
-      // ellipsis();
-      overflow: hidden
-      white-space: nowrap
-      text-overflow: ellipsis
+      ellipsis();
     }
   }
 }
