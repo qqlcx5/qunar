@@ -6,4 +6,11 @@
   </div>
 </template>
 
-<style lang="stylus"></style>
+<script>
+export default {};
+</script>
+<style lang="stylus" scoped>
+#app
+  max-width 750px
+  margin 0 auto
+</style>

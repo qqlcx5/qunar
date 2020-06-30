@@ -38,11 +38,11 @@ export default {
     getDetail() {
       this.$axios.get("/detail").then(res => {
         // , {params: {id: this.$route.params.id}}
-        console.log(res, "res");
+        // console.log(res, "res");
         let resp = res.data.data;
         if (resp.ret && resp.data) {
           const data = resp.data;
-          console.log(data, "/detail");
+          // console.log(data, "/detail");
           this.bannerImg = data.bannerImg;
           this.categoryList = data.categoryList;
           this.gallaryImgs = data.gallaryImgs;

@@ -37,7 +37,7 @@ export default {
   methods: {
     getHomeInfo() {
       this.$axios.get("/index").then(res => {
-        console.log(res.data.data.data);
+        // console.log(res.data.data.data);
         const data = res.data.data.data;
         this.swiperList = data.swiperList;
         this.iconList = data.iconList;

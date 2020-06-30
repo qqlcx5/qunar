@@ -12,7 +12,7 @@ import "./assets/iconfont.css";
 
 // 轮播图
 import VueAwesomeSwiper from "vue-awesome-swiper";
-import "swiper/dist/css/swiper.css";
+import "./assets/css/swiper.min.css";
 Vue.use(VueAwesomeSwiper);
 // mock数据
 import "../api/mock/mockServer";

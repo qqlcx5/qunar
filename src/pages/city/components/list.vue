@@ -69,7 +69,7 @@ export default {
     letter() {
       if (this.letter) {
         const element = this.$refs[this.letter][0];
-        console.log(this.$refs[this.letter][0]);
+        // console.log(this.$refs[this.letter][0]);
         this.scroll.scrollToElement(element);
       }
     }
@@ -79,7 +79,7 @@ export default {
   },
   updated() {
     eventBus.$on("target", item => {
-      console.log("list " + item);
+      // console.log("list " + item);
 
       this.letter = item;
     });

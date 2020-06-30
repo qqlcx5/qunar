@@ -60,7 +60,7 @@ export default {
               element.spell.indexOf(this.keyWord) > -1 ||
               element.name.indexOf(this.keyWord) > -1
             ) {
-              console.log("result " + element);
+              // console.log("result " + element);
               result.push(element);
             }
             this.list = result;

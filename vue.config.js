@@ -4,16 +4,16 @@ module.exports = {
   // 开发服务配置
   devServer: {
     open: false,
-    port: 8080
+    port: 8070
   },
   css: {
     // 样式相关配置
     extract: false,
-    requireModuleExtension: true, 
+    requireModuleExtension: true,
     sourceMap: false,
     loaderOptions: {
       stylus: {
-        import: ['~@/assets/css/mixins.styl']
+        import: ["~@/assets/css/mixins.styl"]
       }
     }
   },
