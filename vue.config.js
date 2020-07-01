@@ -4,7 +4,7 @@ module.exports = {
   // 开发服务配置
   devServer: {
     open: false,
-    port: 8070
+    port: 8060
   },
   css: {
     // 样式相关配置
