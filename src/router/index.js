@@ -5,7 +5,9 @@ Vue.use(Router);
 import home from "@/pages/home/home";
 import city from "@/pages/city/city";
 import detail from "@/pages/detail/detail";
+import Cdn from "@/pages/cdn/index";
 export default new Router({
+  mode: "history",
   routes: [
     {
       path: "/",
@@ -20,6 +22,11 @@ export default new Router({
       path: "/detail/:id",
       name: "detail",
       component: detail
+    },
+    {
+      path: "/cdn",
+      name: "cdn",
+      component: Cdn
     }
   ],
   scrollBehavior() {
